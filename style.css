@@ -251,7 +251,7 @@ section, .produtos{
         justify-content: center;
 
         img{
-            width: 50%;
+            max-width: 50%;
         }
 
         .menu li
