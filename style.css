@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #65BFDD;
+    padding: 16px 0;
+    color: #fff;
+    margin-bottom: 48px;
+
+    & h1{
+        font-style: italic;
+    }
+    
+    
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & img{
+            height: 10rem;
+        }
+
+        & .menu li{
+            list-style: none;
+            display: inline;
+            margin-left: 16px;
+            font-size: 1.2em;
+            
+
+            & a{
+                text-decoration: none;
+                color: #fff;
+                transition: all ease 0.3s;
+            }
+
+            & a:hover{
+                color: #e9e9e9;
+            }
+        }
+    }
+}
+
+hr{
+    border-color: #000;
+}
+
+.price {
+    & strong{
+        font-size: 1.1em;
+    }
+
+    & p{
+        font-size: 0.9em;
+        color: #000000a6;
+    }
+    
+}
+
+
+    
+    .produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 3%;
+    list-style: none;
+    margin-top: 24px;
+    
+
+    & li{
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.219);
+
+        & a{
+            text-decoration: none;
+            color: #000;
+
+            h3{
+                min-height: 58px;
+                
+            }
+    
+            & img{
+                width: 100%;
+                margin-bottom: 16px;
+                
+            }
+
+        }
+
+        button{
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: #3fb0d6;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            & img{
+                height: 32px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+
+h3, h2, hr{
+    margin-bottom: 16px;
+}
+
+
+
+.container-flex{
+    display: flex;
+}
+
+
+
+#sobre{
+    background-color: #65BFDD;
+    padding: 80px 0;
+    font-size: 1rem;
+
+    & p{
+        margin-bottom: 8px;
+    }
+
+    & .sobre-info{
+        justify-content: space-between;
+        
+        
+    
+        & img{
+            max-width: 50%;
+            height: 100%;
+            margin-right: 16px;
+            border-radius: 8px;
+        }
+    }
+}
+
+#contato .container .contactar{
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+
+    & ul li{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-top: px ;
+
+        & img{
+            max-width: 36px;
+            margin-right: 8px;
+        }
+    }
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+
+        & input, button, textarea{
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.5); 
+            margin-bottom: 8px;
+            font-size: 1rem;
+            ;
+        }
+
+        & button{
+            background-color: #3fb0d6;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        & textarea{
+            resize: none;
+            height: 100px;
+        }
+    }
+}
+
+footer{
+    background-color: #3fb0d6;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin-top: 16px;
+
+        & li img{
+            height: 56px;
+        }
+    }
+}
+
+.item-central{
+    margin: 0 16px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos{
+        display: block;
+
+        & li{
+            margin-bottom: 16px;
+        }
+    }
+
+    header .container{
+        justify-content: center;
+
+        img{
+            width: 50%;
+        }
+
+        .menu li
+        {
+            display: flex;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+        }
+        
+    }
+
+    .container-flex{
+        
+        flex-direction: column;
+    }
+
+    section, .produtos{
+        margin-bottom: 50px;
+    }
+
+    #sobre .sobre-info img{
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    #contato .container .contactar{
+        padding: 0;
+        margin-bottom: 64px;
+    
+        & form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 32px;
+}
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1023px) {
+        .container{
+            max-width: 90%;
+        }
+    
+        section{
+            h2{
+                margin-top: 80px;
+            }
+
+            .produtos{
+                grid-template-columns: repeat(2, 49%);
+                row-gap: 1%;
+                column-gap: 2%;
+                
+        
+                & li{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    
+        .container-flex{
+            
+            flex-direction: column;
+            
+        }
+        
+    
+        
+    
+        #sobre .sobre-info img{
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    
+        #contato .container .contactar{
+            padding: 0;
+        
+            & form{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 32px;
+        }
+        }}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .container{
+        width: 95%;
+
+        
+    }
+
+    .produtos{
+        font-size: 0.8em;
+
+        
+}}
