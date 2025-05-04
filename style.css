@@ -124,18 +124,13 @@ hr{
     }
 }
 
-
 h3, h2, hr{
     margin-bottom: 16px;
 }
 
-
-
 .container-flex{
     display: flex;
 }
-
-
 
 #sobre{
     background-color: #65BFDD;
@@ -150,9 +145,10 @@ h3, h2, hr{
         justify-content: space-between;
         
         
+        
     
         & img{
-            max-width: 50%;
+            max-width: 48%;
             height: 100%;
             margin-right: 16px;
             border-radius: 8px;
@@ -160,48 +156,52 @@ h3, h2, hr{
     }
 }
 
-#contato .container .contactar{
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
+#contato{
+    margin-top: 50px;
 
-    & ul li{
-        list-style: none;
-        display: flex;
+    .container .contactar{
+        justify-content: space-between;
         align-items: center;
-        font-weight: 500;
-        margin-top: px ;
-
-        & img{
-            max-width: 36px;
-            margin-right: 8px;
+        padding: 50px 0;
+    
+        & ul li{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            
+    
+            & img{
+                max-width: 36px;
+                margin-right: 8px;
+            }
         }
-    }
-
-    & form{
-        display: flex;
-        flex-direction: column;
-        min-width: 300px;
-
-        & input, button, textarea{
-            padding: 8px;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.5); 
-            margin-bottom: 8px;
-            font-size: 1rem;
-            outline-color: #3fb0d6;
-        }
-
-        & button{
-            background-color: #3fb0d6;
-            border: none;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        & textarea{
-            resize: none;
-            height: 100px;
+    
+        & form{
+            display: flex;
+            flex-direction: column;
+            min-width: 400px;
+    
+            & input, button, textarea{
+                padding: 8px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.5); 
+                margin-bottom: 8px;
+                font-size: 1rem;
+                outline-color: #3fb0d6;
+            }
+    
+            & button{
+                background-color: #3fb0d6;
+                border: none;
+                color: #fff;
+                font-weight: bold;
+            }
+    
+            & textarea{
+                resize: none;
+                height: 100px;
+            }
         }
     }
 }
@@ -227,6 +227,11 @@ footer{
 .item-central{
     margin: 0 16px;
 }
+
+section, .produtos{
+            margin-bottom: 50px;
+        }
+
 
 
 @media screen and (max-width: 640px) {
@@ -256,45 +261,45 @@ footer{
             text-decoration: underline;
         }
         }
-        
-    }
-
-    .container-flex{
-        
-        flex-direction: column;
-    }
-
-    section, .produtos{
-        margin-bottom: 50px;
-    }
-
-    #sobre .sobre-info img{
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-
-    #contato .container .contactar{
-        padding: 0;
-        margin-bottom: 64px;
-    
-        & form{
-            display: flex;
+            
+        .container-flex{
+            
             flex-direction: column;
-            width: 100%;
-            margin-bottom: 32px;
         }
-    }
+
+
+        #sobre .sobre-info img{
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        #contato .container .contactar{
+            padding: 0;
+            margin-bottom: 64px;
+        
+            & form{
+                min-width: 100%;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 32px;
+            }
+        }
+}
 
     @media screen and (min-width: 641px) and (max-width: 1023px) {
         .container{
             max-width: 90%;
         }
+
+        
     
-        section{
+        .promocoes{
             h2{
                 margin-top: 80px;
             }
+        }
 
             .produtos{
                 grid-template-columns: repeat(2, 49%);
@@ -306,15 +311,14 @@ footer{
                     margin-bottom: 16px;
                 }
             }
-        }
+        
     
         .container-flex{
             
             flex-direction: column;
             
         }
-        
-    
+
         
     
         #sobre .sobre-info img{
@@ -340,6 +344,25 @@ footer{
         width: 95%;
 
         
+    }
+
+    
+    #sobre .container-flex{
+            
+        flex-direction: column;
+        
+    }
+    
+
+    
+
+    #sobre .sobre-info{
+
+        img{
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
     }
 
     .produtos{
